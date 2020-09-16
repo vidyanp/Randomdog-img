@@ -14,7 +14,7 @@ def dog(bot,update):
 
   ADAFRUIT_IO_USERNAME = os.getenv('ADAFRUIT_IO_USERNAME')
 ADAFRUIT_IO_KEY = os.getenv('ADAFRUIT_IO_KEY')
-API = os.getenv('TOKEN')
+API = os.getenv('API')
 aio = Client(ADAFRUIT_IO_USERNAME,ADAFRUIT_IO_KEY)
 u =Updater(API,use_context=True)
 
