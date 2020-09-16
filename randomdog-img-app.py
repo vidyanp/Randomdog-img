@@ -1,4 +1,5 @@
 import os
+from Adafruit_IO import Client
 from telegram.ext import Updater,CommandHandler
 import requests #getting the data from the cloud
 
