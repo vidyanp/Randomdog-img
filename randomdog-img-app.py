@@ -13,7 +13,7 @@ def dog(bot,update):
   chat_id = update.message.chat_id
   bot.send_photo(chat_id,photo=url)
 
- ADAFRUIT_IO_USERNAME  = os.getenv('ADAFRUIT_IO_USERNAME')
+ADAFRUIT_IO_USERNAME  = os.getenv('ADAFRUIT_IO_USERNAME')
 ADAFRUIT_IO_KEY = os.getenv('ADAFRUIT_IO_KEY')
 API = os.getenv('API')
 aio = Client( ADAFRUIT_IO_USERNAME,ADAFRUIT_IO_KEY)
