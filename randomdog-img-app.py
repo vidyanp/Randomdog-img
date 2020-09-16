@@ -1,3 +1,4 @@
+import os
 from telegram.ext import Updater,CommandHandler
 import requests #getting the data from the cloud
 
@@ -11,7 +12,12 @@ def dog(bot,update):
   chat_id = update.message.chat_id
   bot.send_photo(chat_id,photo=url)
 
-u = Updater('1322478276:AAEK330uNreUm-1T5CFU8W0psjUl3opaCgw')
+  ADAFRUIT_IO_USERNAME = os.getenv('ADAFRUIT_IO_USERNAME')
+ADAFRUIT_IO_KEY = os.getenv('ADAFRUIT_IO_KEY')
+API = os.getenv('TOKEN')
+aio = Client(ADAFRUIT_IO_USERNAME,ADAFRUIT_IO_KEY)
+u =Updater(API,use_context=True)
+
 dp = u.dispatcher
 dp.add_handler(CommandHandler('dog',dog))
 u.start_polling()
